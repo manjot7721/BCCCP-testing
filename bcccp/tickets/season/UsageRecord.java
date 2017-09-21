@@ -37,8 +37,9 @@ public class UsageRecord implements IUsageRecord {
 	public long getStartTime() {
 		return startDateTime;
 	}
-
-
+	public long setEndTime(long endDateTime){
+		this.enddateTime = endDateTime;
+	}
 
 	@Override
 	public long getEndTime() {
