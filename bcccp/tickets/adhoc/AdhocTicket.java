@@ -101,7 +101,10 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 	
 	@Override
 	public long getPaidDateTime() {
-		return paidDateTime;
+		if(state_ = STATE.PAID)
+			return paidDateTime;
+		else
+			return 0;
 	}
 
 
