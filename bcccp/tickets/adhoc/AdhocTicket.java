@@ -157,8 +157,12 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	@Override
 	public void exit(long dateTime) {
-		exitDateTime = dateTime;
-		state_ = STATE.EXITED;
+		if(state_ == STATE.PAID)
+			return 0;
+		else
+			this.exitDateTime = dateTime;
+			state_ = STATE.EXITED;
+			return exitDateTime;
 	}
 
 
