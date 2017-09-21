@@ -43,7 +43,10 @@ public class UsageRecord implements IUsageRecord {
 
 	@Override
 	public long getEndTime() {
-		return endDateTime;
+		if(endDateTime == this.setEndTime)
+			return endDateTime;
+		else
+			return 0;
 	}
 
 
