@@ -111,8 +111,11 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	@Override
 	public float getCharge() {
-		return charge;
-	}
+			if(state_ = STATE.PAID)
+			return charge;
+		else
+			return 0;
+}
 
 	
 	
