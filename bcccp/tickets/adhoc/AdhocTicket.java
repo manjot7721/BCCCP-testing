@@ -67,9 +67,12 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	
 	@Override
-	public void enter(long entryDateTime) {
-		this.entryDateTime = entryDateTime;
-		this.state_ = STATE.CURRENT;		
+	public void enter(long entryDateTime) throws Exception {
+		if(entryDateTime <= 0)
+			throw new Exception("invalid dateTime")
+			this.entryDateTime = entryDateTime;
+		    this.state_ = STATE.CURRENT;		
+		
 	}
 	
 	
