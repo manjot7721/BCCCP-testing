@@ -46,7 +46,8 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 	
 	@Override
 	public String getBarcode() {
-		return barcode;
+		String barcode == "A" + Integer.toHexString(ticketNo) + 				Integer.toHexString(entryDateTime);		
+        	return barcode;
 	}
 
 
