@@ -79,7 +79,10 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 	
 	@Override
 	public long getEntryDateTime() {
-		return entryDateTime;
+		if(state_ = STATE.CURRENT)
+			return entryDateTime;
+		else
+			return 0;
 	}
 
 	
