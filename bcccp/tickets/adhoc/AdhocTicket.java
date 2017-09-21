@@ -88,10 +88,13 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 	
 	
 	@Override
-	public void pay(long paidDateTime, float charge) {
-		this.paidDateTime = paidDateTime;
-		this.charge = charge;
-		state_ = STATE.PAID;
+	public void pay(long paidDateTime, float charge) throws Exception{
+		if(state_ == STATE.CURRENT || state_ ==STATE.ISSUED)
+			throw Exception(please make payment)
+			this.paidDateTime = paidDateTime;
+			this.charge = charge;
+			state_ = STATE.PAID;
+		
 	}
 	
 	
