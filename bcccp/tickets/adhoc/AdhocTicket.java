@@ -137,8 +137,11 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	@Override
 	public boolean isCurrent() {
-		return state_ == STATE.CURRENT;
-	}
+			if(state_ == STATE.CURRENT || state_ != STATE.EXITED)
+			return true;
+		else
+			return false;
+}
 
 
 
