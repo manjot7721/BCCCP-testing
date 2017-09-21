@@ -147,7 +147,10 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	@Override
 	public boolean isPaid() {
-		return state_ == STATE.PAID;
+		if(state_ == STATE.PAID)
+			return true;
+		else
+			return false;
 	}
 
 
