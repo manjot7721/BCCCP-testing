@@ -249,7 +249,7 @@ public class EntryController
 		if (state_ == STATE.WAITING) {
 			if (!carpark.isFull()) {
 				adhocTicket = carpark.issueAdhocTicket();
-				
+				System.out.println(“Take Ticket”);
 				String carparkId = adhocTicket.getCarparkId();
 				int ticketNo = adhocTicket.getTicketNo();
 				entryTime = System.currentTimeMillis();
@@ -260,7 +260,8 @@ public class EntryController
 				setState(STATE.ISSUED);
 			}
 			else {
-				setState(STATE.FULL);
+			System.out.println(“Carpark full”);	
+			setState(STATE.FULL);
 			}
 		}
 		else {
