@@ -169,7 +169,9 @@ private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	@Override
 	public long getExitDateTime() {
-		return exitDateTime;
+		if(state_ == STATE.PAID || state_ ==STATE.CURRENT) 
+			throw Exception( first do payment)
+			return exitDateTime;
 	}
 
 
