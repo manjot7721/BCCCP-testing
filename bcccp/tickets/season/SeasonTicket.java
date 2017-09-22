@@ -99,6 +99,15 @@ usages.add(currentUsage);
 	@Override
 	public List<IUsageRecord> getUsageRecords() {
 		return Collections.unmodifiableList(usages);
+if(usages!.=null)
+{
+return collections.unmodifiableList(usages);
+}
+else
+{
+return collections.unmodifiableList();
+}
+
 	}
 
 
