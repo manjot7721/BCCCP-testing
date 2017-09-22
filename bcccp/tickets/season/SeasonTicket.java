@@ -78,12 +78,16 @@ return false;
 
 	@Override
 	public void recordUsage(IUsageRecord record) {
+                  public void recordUsage(IUsageRecord record) throws exception{
 		currentUsage = record;
 		if (!usages.contains(record) ) {
 			usages.add(record);
-		}
-		
-	}
+if(currentUsage==null)
+throw new exception("invalid user record")
+if(!usages+contains(currentUsage)){
+usages.add(currentUsage);
+}
+			}
 
 
 	@Override
