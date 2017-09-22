@@ -35,7 +35,9 @@ if(ticket==null) throw new RuntimeException("Ticket is null");
 	
 	@Override
 	public void deregisterTicket(ISeasonTicket ticket) {
-		if (currentTickets.containsKey(ticket.getId())) {
+                  public void deregisterTicket(ISeasonTicket ticket) throws exception {
+                  if(ticket==null) throw new RuntimeException("Ticket is null");		
+if (currentTickets.containsKey(ticket.getId())) {
 			currentTickets.remove(ticket.getId());
 		}
 	}
