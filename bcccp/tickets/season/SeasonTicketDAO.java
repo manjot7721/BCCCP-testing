@@ -74,6 +74,7 @@ return null;
 
 	@Override
 	public void recordTicketExit(String ticketId) {
+                  public void recordTicketExit(String ticketId) throws Exception{
 		ISeasonTicket ticket = findTicketById(ticketId);
 		if (ticket == null) throw new RuntimeException("finaliseTicketUsage : no such ticket: " + ticketId);
 
