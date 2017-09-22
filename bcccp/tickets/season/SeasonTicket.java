@@ -21,7 +21,19 @@ public class SeasonTicket implements ISeasonTicket {
 		this.carparkId =carparkId;
 		this.startValidPeriod = startValidPeriod;
 		this.endValidPeriod = endValidPeriod;
-		
+		public seasonTicket (string tickedID,string carparkID,long startValidPeriod,long endValidPeriod) throws exception{
+                                    if(ticketID==null)
+                                    throw new exception("invalid ticketID")
+                                    this.ticketID=ticketID;
+                                    if(carparkID==null)
+throw new exception("invalid carparkID")
+this.carparkID=carparkID;
+if(startValidPeriod<=0)
+throw new exception("invalid start date")
+this.startValidPeriod=startValidPeriod;
+if(endValidPeriod<=startValidPeriod)
+throw new exception("invalid end date")
+this.endValidPeriod=endValidPeriod;
 		usages = new ArrayList<IUsageRecord>();
 	}
 
