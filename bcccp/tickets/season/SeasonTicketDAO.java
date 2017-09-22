@@ -37,7 +37,7 @@ if(ticket==null) throw new RuntimeException("Ticket is null");
 	public void deregisterTicket(ISeasonTicket ticket) {
                   public void deregisterTicket(ISeasonTicket ticket) throws exception {
                   if(ticket==null) throw new RuntimeException("Ticket is null");		
-if (currentTickets.containsKey(ticket.getId())) {
+                  if (currentTickets.containsKey(ticket.getId())) {
 			currentTickets.remove(ticket.getId());
 		}
 	}
@@ -52,11 +52,13 @@ if (currentTickets.containsKey(ticket.getId())) {
 	public ISeasonTicket findTicketById(String barcode) {
 		if (currentTickets.containsKey(barcode)) {
 			return currentTickets.get(barcode);
-		}
-		return null;
-	}
-
-
+public IseasonTicket findTicketById(String ticketId) throws exception{
+if (currentTickets.containsKey(ticketId)){
+return currentTickets.get(ticketId);
+}
+if(ticketId==null){
+return null;
+}	
 
 	@Override
 	public void recordTicketEntry(String ticketId) {
